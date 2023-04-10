@@ -13,6 +13,10 @@ spring:
           uri: lb://application-service # service name
           predicates:
             - Path=/application-service/** # url pattern
+        - id: storage-service
+          uri: lb://storage-service # service name
+          predicates:
+            - Path=/storage-service/** # url pattern
         - id: composite-service
           uri: lb://composite-service
           predicates:
